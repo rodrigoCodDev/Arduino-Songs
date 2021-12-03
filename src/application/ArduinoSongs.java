@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class ArduinoSongs {
     
     private static Scanner input = new Scanner(System.in);
-    private static List<MusicNote> sheetMusic = new ArrayList();
+    private static List<MusicNote> sheetMusic = new ArrayList<MusicNote>();
         
     private static void clearScreen(){
         System.out.print("\033[H\033[2J");  
@@ -37,12 +37,14 @@ public class ArduinoSongs {
         
         //System.out.println("[Semibreve][Minim][Crotchet][Quaver]\n"+ "[Semiquaver] [Demisemiquaver]");
         System.out.println();
-        System.out.println("[1] Semibreve");
-        System.out.println("[2] Minim");
-        System.out.println("[3] Crontchet");
-        System.out.println("[4] Quaver");
-        System.out.println("[5] Semiquaver");
-        System.out.println("[6] Demisemibreve");
+        System.out.println("en / pt-br");
+        System.out.println("[1] Whole / Semibreve");
+        System.out.println("[2] Half / Mínima");
+        System.out.println("[3] Crontchet / Semínima");
+        System.out.println("[4] Quaver / Colcheia");
+        System.out.println("[5] Semiquaver / Semicolcheia");
+        System.out.println("[6] Demisemibreve / Fusa");
+        System.out.println("[7] Hemidemisemiquaver / Semifusa");
         System.out.print("Notation: ");
         notation = SheetMusicConversor.toNotation(input.nextInt());
         input.nextLine();
@@ -58,12 +60,14 @@ public class ArduinoSongs {
         
         //System.out.println("[Semibreve][Minim][Crotchet][Quaver]\n"+ "[Semiquaver] [Demisemiquaver]");
         System.out.println();
-        System.out.println("[1] Semibreve");
-        System.out.println("[2] Minim");
-        System.out.println("[3] Crontchet");
-        System.out.println("[4] Quaver");
-        System.out.println("[5] Semiquaver");
-        System.out.println("[6] Demisemibreve");
+        System.out.println("en / pt-br");
+        System.out.println("[1] Whole / Semibreve");
+        System.out.println("[2] Half / Mínima");
+        System.out.println("[3] Crontchet / Semínima");
+        System.out.println("[4] Quaver / Colcheia");
+        System.out.println("[5] Semiquaver / Semicolcheia");
+        System.out.println("[6] Demisemibreve / Fusa");
+        System.out.println("[7] Hemidemisemiquaver / Semifusa");
         System.out.print("Notation: ");
         notation = SheetMusicConversor.toNotation(input.nextInt());
         input.nextLine();

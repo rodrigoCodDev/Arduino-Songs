@@ -122,6 +122,10 @@ public class SheetMusicConversor {
                 myNotation = Notation.DEMISEMIQUAVER;
                 break;
                
+            case "Hemidemisemiquaver":
+                myNotation = Notation.HEMIDEMISEMIQUAVER;
+                break;
+                
             default: 
                 myNotation = null;
         }
@@ -157,7 +161,11 @@ public class SheetMusicConversor {
             case 6:
                 myNotation = Notation.DEMISEMIQUAVER;
                 break;
-               
+            
+            case 7:
+                myNotation = Notation.HEMIDEMISEMIQUAVER;
+                break;
+
             default: 
                 myNotation = null;
         }
@@ -183,7 +191,7 @@ public class SheetMusicConversor {
     }
     
     private static List<String> constructSentences(List<MusicNote> sheetMusic){
-        List<String> sentences = new ArrayList();
+        List<String> sentences = new ArrayList<String>();
         
         sentences.add("#define DO  262");
         sentences.add("#define RE  294");
@@ -251,6 +259,9 @@ public class SheetMusicConversor {
         }
         else if (notation == Notation.DEMISEMIQUAVER) {
             delay = 125 - 5; // 0.125s
+        } 
+        else if (notation == Notation.HEMIDEMISEMIQUAVER) {
+            delay = 62 - 5; // 0.125s
         }
         
         return "    delay(" + delay + ");";
